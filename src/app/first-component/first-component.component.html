@@ -1,0 +1,12 @@
+<button (click)="changeColorOfHeros()" >Change Color Of Heros</button>
+<div>
+
+  <input [(ngModel)]="myColor"/>
+
+</div>
+<p>Heroes:</p>
+<ul [style.color]='myColor'>
+  <li *ngFor="let hero of heroes">
+    {{ hero }}
+  </li>
+</ul>
