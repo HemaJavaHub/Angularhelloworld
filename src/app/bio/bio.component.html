@@ -2,7 +2,7 @@
 
 <ul *ngFor="let dev of devs">
 
-<li><a routerLink="/bio/{{dev.id}}">{{dev.firstName}}</a></li>
+<li><a routerLink="/bio/{{dev.id}}">{{dev?.lastName|uppercase}}, {{dev?.firstName</a></li>
 <!-- <li>{{dev.lastName}}</li>
 <li>{{dev.favoriteLanguage}}</li>
 <li>{{dev.yearStarted}}</li> -->

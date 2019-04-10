@@ -16,7 +16,7 @@ developer:Developer;
   getDeveloper(){
 
     this.developer = this.developerService.getDeveloperById(
-     this.activatedRoute.snapshot.params['id']
+     parseInt(this.activatedRoute.snapshot.paramMap.get('id'))
   
     );
   }

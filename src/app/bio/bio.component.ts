@@ -12,6 +12,7 @@ export class BioComponent implements OnInit {
     devs:Developer[];
 
 
+
   //making singleton
   constructor(private developerService:DeveloperService) { 
 
@@ -21,7 +22,7 @@ export class BioComponent implements OnInit {
 
 
 showDeveloper(){
-  this.devs = this.developerService.getDevelopers();
+  this.developerService.getDevelopers().subscribe(response=>this.devs=response);
   
     //this.developer = new Developer("Suneetha","Atla","Java",2009);
   

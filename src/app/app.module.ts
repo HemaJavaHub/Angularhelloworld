@@ -3,12 +3,16 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormsModule }  from '@angular/forms';
+import { FormsModule, ReactiveFormsModule}  from '@angular/forms';
 import { BioComponent } from './bio/bio.component';
 import { HomeComponent } from './home/home.component';
 import { FirstComponentComponent } from './first-component/first-component.component';
 import { HoldingListComponent } from './holding-list/holding-list.component';
 import { BioDetailsComponent } from './bio-details/bio-details.component' ;
+import{ HttpClientModule } from '@angular/common/http';
+import { CreatebioComponent } from './createbio/createbio.component';
+
+
 
 @NgModule({
   declarations: [
@@ -17,12 +21,17 @@ import { BioDetailsComponent } from './bio-details/bio-details.component' ;
     HomeComponent,
     FirstComponentComponent,
     HoldingListComponent,
-    BioDetailsComponent
+    BioDetailsComponent,
+    CreatebioComponent
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
